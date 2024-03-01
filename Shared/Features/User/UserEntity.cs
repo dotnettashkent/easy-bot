@@ -36,5 +36,8 @@ namespace Shared.Features
         [Column("pay_phone_number")]
         public string? PayPhoneNumber { get; set; }
 
+        [Column("pay_phone_number_company")]
+        public string? PayPhoneNumberCompany { get; set; }
+
     }
 }

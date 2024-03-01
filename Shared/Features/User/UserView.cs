@@ -7,7 +7,7 @@ namespace Shared.Features
 {
     [DataContract, MemoryPackable]
     [ParameterComparer(typeof(ByValueParameterComparer))]
-    public partial class UserView
+    public partial class UserView : BaseEntity
     {
         [property : DataMember]
         [property : JsonPropertyName("phone_number")]
@@ -47,5 +47,9 @@ namespace Shared.Features
         [property: DataMember]
         [property: JsonPropertyName("pay_phone_number")]
         public string? PayPhoneNumber { get; set; }
+
+        [property: DataMember]
+        [property : JsonPropertyName("pay_phone_number_company")]
+        public string? PayPhoneNumberCompany { get; set; }
     }
 }
